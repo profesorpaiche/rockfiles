@@ -1,0 +1,988 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+env:
+  # TERM variable
+  TERM: xterm-256color
+
+window:
+  # Window dimensions (changes require restart)
+  #  columns: 0
+  #  lines: 0
+
+  # Window position (changes require restart)
+  #  x: 0
+  #  y: 0
+
+  # Window padding (changes require restart)
+  padding:
+    x: 6
+    y: 6
+
+  # Spread additional padding evenly around the terminal content.
+  #dynamic_padding: false
+
+  # Window decorations
+  #decorations: full
+
+  # Startup Mode (changes require restart)
+  #startup_mode: Windowed
+
+  # Window title
+  title: Alacritty
+
+  # Window class (Linux/BSD only):
+  class:
+    # Application instance name
+    instance: Alacritty
+    # General application class
+    general: Alacritty
+
+  # GTK theme variant (Linux/BSD only)
+  #gtk_theme_variant: None
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 5000
+
+  # Scrolling distance multiplier.
+  #multiplier: 3
+
+# Font configuration
+font:
+  # Normal font face
+  normal:
+    family: FantasqueSansMono Nerd Font 
+    #family: UbuntuMono Nerd Font
+    style: Regular
+
+  # Bold font face
+  bold:
+    family: FantasqueSansMono Nerd Font
+    style: Bold
+
+  # Italic font face
+  italic:
+    family: FantasqueSansMono Nerd Font
+    style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    family: FantasqueSansMono Nerd Font
+    style: Bold Italic
+
+  # Point size
+  size: 7.5
+  # size: 11
+
+  # Offset is the extra space around each character. `offset.y` can be thought of
+  # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
+  offset:
+    x: 0
+    y: 1
+
+  # Glyph offset determines the locations of the glyphs within their cells with
+  # the default being at the bottom. Increasing `x` moves the glyph to the right,
+  # increasing `y` moves the glyph upwards.
+  glyph_offset:
+    x: 0
+    y: 0
+
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: true
+
+schemes:
+
+  # Colors (Miramare)
+  miramare: &miramare
+    # Default colors
+    primary:
+      background: '#2A2426'
+      foreground: '#e6d6ac'
+
+    # Cursor color
+    cursor:
+      text:   '#2A2426'
+      cursor: '#e6d6ac'
+
+    # Normal colors
+    normal:
+      black:   '#242021'
+      red:     '#e68183'
+      green:   '#87af87'
+      yellow:  '#d9bb80'
+      blue:    '#89beba'
+      magenta: '#d3a0bc'
+      cyan:    '#87c095'
+      white:   '#5b5b5b'
+
+    # Bright colors
+    bright:
+      black:   '#444444'
+      red:     '#e68183'
+      green:   '#87af87'
+      yellow:  '#d9bb80'
+      blue:    '#89beba'
+      magenta: '#d3a0bc'
+      cyan:    '#87c095'
+      white:   '#d8caac'
+
+  # Colors (Dracula)
+  dracula: &dracula
+    # Default colors
+    primary:
+      background: '#282a36'
+      foreground: '#f8f8f2'
+
+    # Cursor color
+    cursor:
+      text:   '#44475a'
+      cursor: '#f8f8f2'
+
+    # Normal colors
+    normal:
+      black:   '#000000'
+      red:     '#ff5555'
+      green:   '#50fa7b'
+      yellow:  '#f1fa8c'
+      blue:    '#bd93f9'
+      magenta: '#ff79c6'
+      cyan:    '#8be9fd'
+      white:   '#bfbfbf'
+
+    # Bright colors
+    bright:
+      black:   '#4d4d4d'
+      red:     '#ff6e67'
+      green:   '#5af78e'
+      yellow:  '#f4f99d'
+      blue:    '#caa9fa'
+      magenta: '#ff92d0'
+      cyan:    '#9aedfe'
+      white:   '#e6e6e6'
+
+    # Dim colors
+    dim:
+      black:   '#14151b'
+      red:     '#ff2222'
+      green:   '#1ef956'
+      yellow:  '#ebf85b'
+      blue:    '#4d5b86'
+      magenta: '#ff46b0'
+      cyan:    '#59dffc'
+      white:   '#e6e6d1'
+
+    # Indexed Colors
+    indexed_colors: []
+
+  # Colors (Deus)
+  deus: &deus
+    # Default colors
+    primary:
+      background: '#2c323b'
+      foreground: '#eaeaea'
+    # Normal colors
+    normal:
+      black:   '#242a32'
+      red:     '#d54e53'
+      green:   '#98c379'
+      yellow:  '#e5c07b'
+      blue:    '#83a598'
+      magenta: '#c678dd'
+      cyan:    '#70c0ba'
+      white:   '#eaeaea'
+    # Bright colors
+    bright:
+      black:   '#666666'
+      red:     '#ec3e45'
+      green:   '#90c966'
+      yellow:  '#edbf69'
+      blue:    '#73ba9f'
+      magenta: '#c858e9'
+      cyan:    '#2bcec2'
+      white:   '#ffffff'
+
+  ## Colors (Iceberg)
+  iceberg: &iceberg
+    # Default colors
+    primary:
+      background: '#161821'
+      foreground: '#d2d4de'
+
+    # Normal colors
+    normal:
+      black:   '#161821'
+      red:     '#e27878'
+      green:   '#b4be82'
+      yellow:  '#e2a478'
+      blue:    '#84a0c6'
+      magenta: '#a093c7'
+      cyan:    '#89b8c2'
+      white:   '#c6c8d1'
+
+    # Bright colors
+    bright:
+      black:   '#6b7089'
+      red:     '#e98989'
+      green:   '#c0ca8e'
+      yellow:  '#e9b189'
+      blue:    '#91acd1'
+      magenta: '#ada0d3'
+      cyan:    '#95c4ce'
+      white:   '#d2d4de'
+
+  ## Colors (Nord)
+  nord: &nord
+
+    # Default colors
+    primary:
+      # background: '#2b161c'
+      background: '#2e3440'
+      foreground: '#d8dee9'
+
+    # Cursor color
+    cursor:
+      text: '#2e3440'
+      cursor: '#d8dee9'
+
+    # Vi cursor
+    vi_mode_cursor:
+      text: '#2e3440'
+      cursor: '#d8dee9'
+
+    # Selection
+    selection:
+      text: CellForeground
+      background: '#4c566a'
+
+    # Search
+    search:
+      matches:
+        foreground: CellBackground
+        background: '#88c0d0'
+      bar:
+        background: '#434c5e'
+        foreground: '#d8dee9'
+
+    # Normal colors
+    normal:
+      black:   '#3b4252'
+      red:     '#bf616a'
+      green:   '#a3be8c'
+      yellow:  '#ebcb8b'
+      blue:    '#81a1c1'
+      magenta: '#b48ead'
+      cyan:    '#88c0d0'
+      white:   '#e5e9f0'
+
+    # Bright colors
+    bright:
+      black:   '#4c566a'
+      red:     '#bf616a'
+      green:   '#a3be8c'
+      yellow:  '#ebcb8b'
+      blue:    '#81a1c1'
+      magenta: '#b48ead'
+      cyan:    '#8fbcbb'
+      white:   '#eceff4'
+
+  # Colors (burgundy)
+  burgundy: &burgundy
+    # Default colors
+    primary:
+      background: '#1a0a16'
+      foreground: '#f2ead7'
+  
+    # Bright colors
+    bright:
+      black:   '#240d19'
+      red:     '#d11b2d'
+      green:   '#f2b600'
+      yellow:  '#ff8e2b'
+      blue:    '#4d4d80'
+      magenta: '#782963'
+      cyan:    '#8fff8b'
+      white:   '#ffabab'
+  
+    # Normal colors
+    normal:
+      black:   '#4a1027'
+      red:     '#d6154f'
+      green:   '#f0bf69'
+      yellow:  '#ed8d7c'
+      blue:    '#7070a0'
+      magenta: '#c763a4'
+      cyan:    '#cfeee2'
+      white:   '#f2c9db'
+
+  # Colors (meh)
+  meh: &meh
+    # Default colors
+    primary:
+      background: '#24252a'
+      foreground: '#ddddcc'
+
+    # Cursor color
+    cursor:
+      text:   '#24252a'
+      cursor: '#ddddcc'
+
+    # Normal colors
+    normal:
+      black:   '#1c1c1c'
+      red:     '#ee6666'
+      green:   '#77aa88'
+      yellow:  '#ddaa66'
+      blue:    '#88aaee'
+      magenta: '#dd77cc'
+      cyan:    '#707a9a'
+      white:   '#777777'
+
+    # Bright colors
+    bright:
+      black:   '#303033'
+      red:     '#dd7766'
+      green:   '#99bb99'
+      yellow:  '#ccaa88'
+      blue:    '#88aabb'
+      magenta: '#dd99ff'
+      cyan:    '#a0a0bb'
+      white:   '#dddddd'
+
+  # Tokyo Night theme, based on both:
+  tokyo-night: &tokyo-night
+    # Default colors
+    primary:
+      background: '#1a1b26'
+      foreground: '#a9b1d6'
+      
+    # Normal colors
+    normal:
+      black:   '#32344a'
+      red:     '#f7768e'
+      green:   '#9ece6a'
+      yellow:  '#e0af68'
+      blue:    '#7aa2f7'
+      magenta: '#ad8ee6'
+      cyan:    '#449dab'
+      white:   '#787c99'
+      
+    # Bright colors
+    bright:
+      black:   '#444b6a'
+      red:     '#ff7a93'
+      green:   '#b9f27c'
+      yellow:  '#ff9e64'
+      blue:    '#7da6ff'
+      magenta: '#bb9af7'
+      cyan:    '#0db9d7'
+      white:   '#acb0d0'
+
+  # Colors (paleta)
+  paleta: &paleta
+    # Default colors
+    primary:
+      background: '#0B1D2B'
+      foreground: '#CCD2DD'
+    # Cursor color
+    cursor:
+      text:   '#232E39'
+      cursor: '#B5BBC6'
+    # Normal colors
+    normal:
+      black:   '#373F4A'
+      red:     '#AB5D8D'
+      yellow:  '#A9645E'
+      green:   '#64802D'
+      cyan:    '#00888C'
+      blue:    '#437CA9'
+      magenta: '#8C68AA'
+      white:   '#898F9A'
+    # Bright colors
+    bright:
+      black:   '#4B525D'
+      red:     '#D385B4'
+      yellow:  '#D28B86'
+      green:   '#8BA75D'
+      cyan:    '#50AEB2'
+      blue:    '#71A3D0'
+      magenta: '#B290D1'
+      white:   '#9FA5B0'
+
+  # Color (apprentice)
+  apprentice: &apprentice
+    # Default colors
+    primary:
+      background: '#262626'
+      foreground: '#BCBCBC'
+    # Cursor color
+    cursor:
+      text:   '#262626'
+      cursor: '#BCBCBC'
+    # Normal colors
+    normal:
+      black:   '#1C1C1C'
+      red:     '#AF5F5F'
+      green:   '#5F875F'
+      yellow:  '#87875F'
+      blue:    '#5F87AF'
+      magenta: '#5F5F87'
+      cyan:    '#5F8787'
+      white:   '#6C6C6C'
+    # Bright colors
+    bright:
+      black:   '#444444'
+      red:     '#FF8700'
+      green:   '#87AF87'
+      yellow:  '#FFFFAF'
+      blue:    '#87AFD7'
+      magenta: '#8787AF'
+      cyan:    '#5FAFAF'
+      white:   '#FFFFFF'
+
+  ## Colors (Bluewery)
+  bluewery: &bluewery
+
+    # Default colors
+    primary:
+      background: '#07242c'
+      foreground: '#c4c7c7'
+
+    # Cursor color
+    cursor:
+      text: '#07242c'
+      cursor: '#c4c7c7'
+
+    # Vi cursor
+    vi_mode_cursor:
+      text: '#07242c'
+      cursor: '#dafafc'
+
+    # Selection
+    selection:
+      text: CellForeground
+      background: '#714867'
+
+    # Normal colors
+    normal:
+      black:   '#07242c'
+      red:     '#fc6195'
+      green:   '#5AC6A1'
+      yellow:  '#fff1ac'
+      blue:    '#296873'
+      magenta: '#85919b'
+      cyan:    '#04a7a7'
+      white:   '#c4c7c7'
+
+    # Bright colors
+    bright:
+      black:   '#142c35'
+      red:     '#fc81a5'
+      green:   '#335449'
+      yellow:  '#DF7353'
+      blue:    '#6FaEaF'
+      magenta: '#465f7b'
+      cyan:    '#94e7e7'
+      white:   '#dafafc'
+
+  ## Colors (Dogrun)
+  dogrun: &dogrun
+
+    # Default colors
+    primary:
+      background: '#222433'
+      foreground: '#9EA3C0'
+
+    # Cursor color
+    cursor:
+      text: '#FEFFFF'
+      cursor: '#C7C7C7'
+
+    # Selection
+    selection:
+      text: '#FEFFFF'
+      background: '#55596D'
+
+    # Normal colors
+    normal:
+      black:   '#000000'
+      red:     '#FF6D67'
+      green:   '#7CBE8C'
+      yellow:  '#F3F89D'
+      blue:    '#929BE5'
+      magenta: '#FF92D0'
+      cyan:    '#2AACBD'
+      white:   '#C7C7C7'
+
+    # Bright colors
+    bright:
+      black:   '#5D6772'
+      red:     '#D4635E'
+      green:   '#6BA87A'
+      yellow:  '#B3C580'
+      blue:    '#838CD5'
+      magenta: '#FF92D0'
+      cyan:    '#2AACBD'
+      white:   '#FFFFFF'
+
+  # Space Duck
+  spaceduck: &spaceduck
+    # Default colors
+    primary:
+      background: '#0f111b'
+      foreground: '#ecf0c1'
+    # Normal colors
+    normal:
+      black:   '#000000'
+      red:     '#e33400'
+      green:   '#5ccc96'
+      yellow:  '#b3a1e6'
+      blue:    '#00a3cc'
+      magenta: '#f2ce00'
+      cyan:    '#7a5ccc'
+      white:   '#686f9a'
+
+    # Bright colors
+    bright:
+      black:   '#686f9a'
+      red:     '#e33400'
+      green:   '#5ccc96'
+      yellow:  '#b3a1e6'
+      blue:    '#00a3cc'
+      magenta: '#f2ce00'
+      cyan:    '#7a5ccc'
+      white:   '#f0f1ce'
+
+  ## Colors (Shado)
+  shado: &shado
+
+    # Default colors
+    primary:
+      background: '#09090d'
+      foreground: '#e3c7fc'
+
+    # Cursor color
+    cursor:
+      text: '#09090d'
+      cursor: '#f1c4e0'
+
+    # Normal colors
+    normal:
+      black:   '#140a1d'
+      red:     '#b52a5b'
+      green:   '#ff4971'
+      yellow:  '#8897f4'
+      blue:    '#bd93f9'
+      magenta: '#e9729d'
+      cyan:    '#f18fb0'
+      white:   '#f1c4e0'
+
+    # Bright colors
+    bright:
+      black:   '#a8899c'
+      red:     '#b52a5b'
+      green:   '#ff4971'
+      yellow:  '#8897f4'
+      blue:    '#bd93f9'
+      magenta: '#e9729d'
+      cyan:    '#f18fb0'
+      white:   '#f1c4e0'
+
+  ## Colors (Nisha)
+  nisha: &nisha
+
+    # Default colors
+    primary:
+      background: '#191a21'
+      foreground: '#efe6dd'
+
+    # Cursor color
+    cursor:
+      text: '#191a21'
+      cursor: '#efe6dd'
+
+    # Normal colors
+    normal:
+      black:   '#262626'
+      red:     '#ef233c'
+      green:   '#307555'
+      yellow:  '#bf9f82'
+      blue:    '#5e3c7d'
+      magenta: '#cc80a8'
+      cyan:    '#4f7684'
+      white:   '#efe6dd'
+
+    # Bright colors
+    bright:
+      black:   '#767b8b'
+      red:     '#f14358'
+      green:   '#6bc29a'
+      yellow:  '#e8c19b'
+      blue:    '#a27fc2'
+      magenta: '#ea93c2'
+      cyan:    '#99b7c2'
+      white:   '#ffffff'
+
+colors: *tokyo-night
+
+# Background opacity
+# background_opacity: 0.95
+window.opacity: 0.60
+
+#selection:
+  #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
+  # When set to `true`, selected text will be copied to the primary clipboard.
+  #save_to_clipboard: false
+
+# Allow terminal applications to change Alacritty's window title.
+#dynamic_title: true
+
+cursor:
+  # Cursor style
+  #
+  # Values for `style`:
+  #   - ▇ Block
+  #   - _ Underline
+  #   - | Beam
+  #style: Block
+
+  # Vi mode cursor style
+  #
+  # If the vi mode cursor style is `None` or not specified, it will fall back to
+  # the style of the active value of the normal cursor.
+  #
+  # See `cursor.style` for available options.
+  #vi_mode_style: None
+
+  # If this is `true`, the cursor will be rendered as a hollow box when the
+  # window is not focused.
+  unfocused_hollow: true
+
+  # Thickness of the cursor relative to the cell width as floating point number
+  # from `0.0` to `1.0`.
+  #thickness: 0.15
+
+# Live config reload (changes require restart)
+#live_config_reload: true
+
+# Shell
+#
+# You can set `shell.program` to the path of your favorite shell, e.g. `/bin/fish`.
+# Entries in `shell.args` are passed unmodified as arguments to the shell.
+#
+# Default:
+#   - (macOS) /bin/bash --login
+#   - (Linux/BSD) user login shell
+#   - (Windows) powershell
+#shell:
+#  program: /bin/bash
+#  args:
+#    - --login
+
+# Startup directory
+working_directory: /home/paiche/
+
+# Send ESC (\x1b) before characters when alt is pressed.
+#alt_send_esc: true
+
+#mouse:
+  # Click settings
+  #
+  # The `double_click` and `triple_click` settings control the time
+  # alacritty should wait for accepting multiple clicks as one double
+  # or triple click.
+  #double_click: { threshold: 300 }
+  #triple_click: { threshold: 300 }
+
+  # If this is `true`, the cursor is temporarily hidden when typing.
+  #hide_when_typing: false
+
+  #url:
+    # URL launcher
+    #
+    # This program is executed when clicking on a text which is recognized as a URL.
+    # The URL is always added to the command as the last parameter.
+    #
+    # When set to `launcher: None`, URL launching will be disabled completely.
+    #
+    # Default:
+    #   - (macOS) open
+    #   - (Linux/BSD) xdg-open
+    #   - (Windows) explorer
+    #launcher:
+    #  program: xdg-open
+    #  args: []
+
+    # URL modifiers
+    #
+    # These are the modifiers that need to be held down for opening URLs when clicking
+    # on them. The available modifiers are documented in the key binding section.
+    #modifiers: None
+
+# Mouse bindings
+#
+# Mouse bindings are specified as a list of objects, much like the key
+# bindings further below.
+#
+# To trigger mouse bindings when an application running within Alacritty captures the mouse, the
+# `Shift` modifier is automatically added as a requirement.
+#
+# Each mouse binding will specify a:
+#
+# - `mouse`:
+#
+#   - Middle
+#   - Left
+#   - Right
+#   - Numeric identifier such as `5`
+#
+# - `action` (see key bindings)
+#
+# And optionally:
+#
+# - `mods` (see key bindings)
+#mouse_bindings:
+#  - { mouse: Middle, action: PasteSelection }
+
+# Key bindings
+#
+# Key bindings are specified as a list of objects. For example, this is the
+# default paste binding:
+#
+# `- { key: V, mods: Control|Shift, action: Paste }`
+#
+# Each key binding will specify a:
+#
+# - `key`: Identifier of the key pressed
+#
+#    - A-Z
+#    - F1-F24
+#    - Key0-Key9
+#
+#    A full list with available key codes can be found here:
+#    https://docs.rs/glutin/*/glutin/event/enum.VirtualKeyCode.html#variants
+#
+#    Instead of using the name of the keys, the `key` field also supports using
+#    the scancode of the desired key. Scancodes have to be specified as a
+#    decimal number. This command will allow you to display the hex scancodes
+#    for certain keys:
+#
+#       `showkey --scancodes`.
+#
+# Then exactly one of:
+#
+# - `chars`: Send a byte sequence to the running application
+#
+#    The `chars` field writes the specified string to the terminal. This makes
+#    it possible to pass escape sequences. To find escape codes for bindings
+#    like `PageUp` (`"\x1b[5~"`), you can run the command `showkey -a` outside
+#    of tmux. Note that applications use terminfo to map escape sequences back
+#    to keys. It is therefore required to update the terminfo when changing an
+#    escape sequence.
+#
+# - `action`: Execute a predefined action
+#
+#   - ToggleViMode
+#   - Copy
+#   - Paste
+#   - PasteSelection
+#   - IncreaseFontSize
+#   - DecreaseFontSize
+#   - ResetFontSize
+#   - ScrollPageUp
+#   - ScrollPageDown
+#   - ScrollHalfPageUp
+#   - ScrollHalfPageDown
+#   - ScrollLineUp
+#   - ScrollLineDown
+#   - ScrollToTop
+#   - ScrollToBottom
+#   - ClearHistory
+#   - Hide
+#   - Minimize
+#   - Quit
+#   - ToggleFullscreen
+#   - SpawnNewInstance
+#   - ClearLogNotice
+#   - ClearSelection
+#   - ReceiveChar
+#   - None
+#
+#   (`mode: Vi` only):
+#   - Open
+#   - Up
+#   - Down
+#   - Left
+#   - Right
+#   - First
+#   - Last
+#   - FirstOccupied
+#   - High
+#   - Middle
+#   - Low
+#   - SemanticLeft
+#   - SemanticRight
+#   - SemanticLeftEnd
+#   - SemanticRightEnd
+#   - WordRight
+#   - WordLeft
+#   - WordRightEnd
+#   - WordLeftEnd
+#   - Bracket
+#   - ToggleNormalSelection
+#   - ToggleLineSelection
+#   - ToggleBlockSelection
+#   - ToggleSemanticSelection
+#
+#   (macOS only):
+#   - ToggleSimpleFullscreen: Enters fullscreen without occupying another space
+#
+#   (Linux/BSD only):
+#   - CopySelection: Copies into selection buffer
+#
+# - `command`: Fork and execute a specified command plus arguments
+#
+#    The `command` field must be a map containing a `program` string and an
+#    `args` array of command line parameter strings. For example:
+#       `{ program: "alacritty", args: ["-e", "vttest"] }`
+#
+# And optionally:
+#
+# - `mods`: Key modifiers to filter binding actions
+#
+#    - Command
+#    - Control
+#    - Option
+#    - Super
+#    - Shift
+#    - Alt
+#
+#    Multiple `mods` can be combined using `|` like this:
+#       `mods: Control|Shift`.
+#    Whitespace and capitalization are relevant and must match the example.
+#
+# - `mode`: Indicate a binding for only specific terminal reported modes
+#
+#    This is mainly used to send applications the correct escape sequences
+#    when in different modes.
+#
+#    - AppCursor
+#    - AppKeypad
+#    - Alt
+#
+#    A `~` operator can be used before a mode to apply the binding whenever
+#    the mode is *not* active, e.g. `~Alt`.
+#
+# Bindings are always filled by default, but will be replaced when a new
+# binding with the same triggers is defined. To unset a default binding, it can
+# be mapped to the `ReceiveChar` action. Alternatively, you can use `None` for
+# a no-op if you do not wish to receive input characters for that binding.
+#
+# If the same trigger is assigned to multiple actions, all of them are executed
+# at once.
+#key_bindings:
+  #- { key: Paste,                                action: Paste          }
+  #- { key: Copy,                                 action: Copy           }
+  #- { key: L,         mods: Control,             action: ClearLogNotice }
+  #- { key: L,         mods: Control, mode: ~Vi,  chars: "\x0c"          }
+  #- { key: PageUp,    mods: Shift,   mode: ~Alt, action: ScrollPageUp,  }
+  #- { key: PageDown,  mods: Shift,   mode: ~Alt, action: ScrollPageDown }
+  #- { key: Home,      mods: Shift,   mode: ~Alt, action: ScrollToTop,   }
+  #- { key: End,       mods: Shift,   mode: ~Alt, action: ScrollToBottom }
+
+  # Vi Mode
+  #- { key: Space,  mods: Shift|Control, mode: Vi, action: ScrollToBottom          }
+  #- { key: Space,  mods: Shift|Control,           action: ToggleViMode            }
+  #- { key: Escape,                      mode: Vi, action: ClearSelection          }
+  #- { key: I,                           mode: Vi, action: ScrollToBottom          }
+  #- { key: I,                           mode: Vi, action: ToggleViMode            }
+  #- { key: Y,      mods: Control,       mode: Vi, action: ScrollLineUp            }
+  #- { key: E,      mods: Control,       mode: Vi, action: ScrollLineDown          }
+  #- { key: G,                           mode: Vi, action: ScrollToTop             }
+  #- { key: G,      mods: Shift,         mode: Vi, action: ScrollToBottom          }
+  #- { key: B,      mods: Control,       mode: Vi, action: ScrollPageUp            }
+  #- { key: F,      mods: Control,       mode: Vi, action: ScrollPageDown          }
+  #- { key: U,      mods: Control,       mode: Vi, action: ScrollHalfPageUp        }
+  #- { key: D,      mods: Control,       mode: Vi, action: ScrollHalfPageDown      }
+  #- { key: Y,                           mode: Vi, action: Copy                    }
+  #- { key: Y,                           mode: Vi, action: ClearSelection          }
+  #- { key: Copy,                        mode: Vi, action: ClearSelection          }
+  #- { key: V,                           mode: Vi, action: ToggleNormalSelection   }
+  #- { key: V,      mods: Shift,         mode: Vi, action: ToggleLineSelection     }
+  #- { key: V,      mods: Control,       mode: Vi, action: ToggleBlockSelection    }
+  #- { key: V,      mods: Alt,           mode: Vi, action: ToggleSemanticSelection }
+  #- { key: Return,                      mode: Vi, action: Open                    }
+  #- { key: K,                           mode: Vi, action: Up                      }
+  #- { key: J,                           mode: Vi, action: Down                    }
+  #- { key: H,                           mode: Vi, action: Left                    }
+  #- { key: L,                           mode: Vi, action: Right                   }
+  #- { key: Up,                          mode: Vi, action: Up                      }
+  #- { key: Down,                        mode: Vi, action: Down                    }
+  #- { key: Left,                        mode: Vi, action: Left                    }
+  #- { key: Right,                       mode: Vi, action: Right                   }
+  #- { key: Key0,                        mode: Vi, action: First                   }
+  #- { key: Key4,   mods: Shift,         mode: Vi, action: Last                    }
+  #- { key: Key6,   mods: Shift,         mode: Vi, action: FirstOccupied           }
+  #- { key: H,      mods: Shift,         mode: Vi, action: High                    }
+  #- { key: M,      mods: Shift,         mode: Vi, action: Middle                  }
+  #- { key: L,      mods: Shift,         mode: Vi, action: Low                     }
+  #- { key: B,                           mode: Vi, action: SemanticLeft            }
+  #- { key: W,                           mode: Vi, action: SemanticRight           }
+  #- { key: E,                           mode: Vi, action: SemanticRightEnd        }
+  #- { key: B,      mods: Shift,         mode: Vi, action: WordLeft                }
+  #- { key: W,      mods: Shift,         mode: Vi, action: WordRight               }
+  #- { key: E,      mods: Shift,         mode: Vi, action: WordRightEnd            }
+  #- { key: Key5,   mods: Shift,         mode: Vi, action: Bracket                 }
+
+  # (Windows, Linux, and BSD only)
+  #- { key: V,        mods: Control|Shift,           action: Paste            }
+  #- { key: C,        mods: Control|Shift,           action: Copy             }
+  #- { key: C,        mods: Control|Shift, mode: Vi, action: ClearSelection   }
+  #- { key: Insert,   mods: Shift,                   action: PasteSelection   }
+  #- { key: Key0,     mods: Control,                 action: ResetFontSize    }
+  #- { key: Equals,   mods: Control,                 action: IncreaseFontSize }
+  #- { key: Add,      mods: Control,                 action: IncreaseFontSize }
+  #- { key: Subtract, mods: Control,                 action: DecreaseFontSize }
+  #- { key: Minus,    mods: Control,                 action: DecreaseFontSize }
+
+  # (Windows only)
+  #- { key: Return,   mods: Alt,           action: ToggleFullscreen }
+
+  # (macOS only)
+  #- { key: K,      mods: Command, mode: ~Vi, chars: "\x0c"            }
+  #- { key: Key0,   mods: Command,            action: ResetFontSize    }
+  #- { key: Equals, mods: Command,            action: IncreaseFontSize }
+  #- { key: Add,    mods: Command,            action: IncreaseFontSize }
+  #- { key: Minus,  mods: Command,            action: DecreaseFontSize }
+  #- { key: K,      mods: Command,            action: ClearHistory     }
+  #- { key: V,      mods: Command,            action: Paste            }
+  #- { key: C,      mods: Command,            action: Copy             }
+  #- { key: C,      mods: Command, mode: Vi,  action: ClearSelection   }
+  #- { key: H,      mods: Command,            action: Hide             }
+  #- { key: M,      mods: Command,            action: Minimize         }
+  #- { key: Q,      mods: Command,            action: Quit             }
+  #- { key: W,      mods: Command,            action: Quit             }
+  #- { key: N,      mods: Command,            action: SpawnNewInstance }
+  #- { key: F,      mods: Command|Control,    action: ToggleFullscreen }
+
+#debug:
+  # Display the time it takes to redraw each frame.
+  #render_timer: false
+
+  # Keep the log file after quitting Alacritty.
+  #persistent_logging: false
+
+  # Log level
+  #
+  # Values for `log_level`:
+  #   - None
+  #   - Error
+  #   - Warn
+  #   - Info
+  #   - Debug
+  #   - Trace
+  #log_level: Warn
+
+  # Print all received window events.
+  #print_events: false
