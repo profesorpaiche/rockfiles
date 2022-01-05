@@ -34,6 +34,9 @@ require("awful.hotkeys_popup.keys")
 local debian = require("debian.menu")
 local has_fdo, freedesktop = pcall(require, "freedesktop")
 
+-- Enable EWMH support
+local foobar = require("awful.ewmh")
+
 -- ERROR HANDLING -------------------------------------------------------------
 
 -- {{{ Error handling
@@ -70,7 +73,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/home/paiche/.config/awesome/theme_tokyonight.lua")
+beautiful.init("/home/paiche/.config/awesome/theme_meh.lua")
 -- beautiful.init("/home/paiche/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
@@ -615,3 +618,10 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+--------------------------------------------------------------------------------
+-- Autostart
+--------------------------------------------------------------------------------
+
+awful.util.spawn("nm-applet")
+awful.util.spawn("picom --experimental-backend")
