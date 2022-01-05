@@ -3,16 +3,16 @@
 --  By Dante C. (profesorpaiche) --
 -----------------------------------
 
-local color_bgr = "#1a1b26"
-local color_fgr = "#a9b1d6"
-local color_bla = "#444b6a"
-local color_red = "#ff7a93"
-local color_gre = "#b9f27c"
-local color_yel = "#ff9e64"
-local color_blu = "#7da6ff"
-local color_mag = "#bb9af7"
-local color_cya = "#0db9d7"
-local color_whi = "#acb0d0"
+local color_bgr = "#202022"
+local color_fgr = "#ddddcc"
+local color_bla = "#303033"
+local color_red = "#dd7766"
+local color_gre = "#99bb99"
+local color_yel = "#ccaa88"
+local color_blu = "#88aabb"
+local color_mag = "#dd99ff"
+local color_cya = "#a0a0bb"
+local color_whi = "#777777"
 
 -----------------------------------
 
@@ -28,20 +28,21 @@ theme.wallpaper = "/media/paiche/Imagenes/Wallpaper/Bakpau_dark_elegant.jpg"
 theme.font = "FantasqueSansMono Nerd Font 11"
 
 -- {{{ Colors
-theme.fg_normal  = color_fgr
+theme.fg_normal  = color_whi
 theme.fg_focus   = color_fgr
 theme.fg_urgent  = color_bgr
-theme.bg_normal  = color_bgr
-theme.bg_focus   = color_bla
+theme.fg_systray = theme.fg_focus
+theme.bg_normal  = color_bla
+theme.bg_focus   = color_bgr
 theme.bg_urgent  = color_red
 theme.bg_systray = theme.bg_normal
 -- }}}
 
 -- {{{ Borders
 theme.useless_gap   = dpi(2)
-theme.border_width  = dpi(2)
+theme.border_width  = dpi(1)
 theme.border_normal = color_bla
-theme.border_focus  = color_red
+theme.border_focus  = color_gre
 theme.border_marked = color_yel
 -- }}}
 

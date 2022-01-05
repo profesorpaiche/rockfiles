@@ -319,12 +319,12 @@ schemes:
   meh: &meh
     # Default colors
     primary:
-      background: '#24252a'
+      background: '#202022'
       foreground: '#ddddcc'
 
     # Cursor color
     cursor:
-      text:   '#24252a'
+      text:   '#202022'
       cursor: '#ddddcc'
 
     # Normal colors
@@ -623,7 +623,7 @@ schemes:
       cyan:    '#99b7c2'
       white:   '#ffffff'
 
-colors: *tokyo-night
+colors: *meh
 
 # Background opacity
 # background_opacity: 0.95

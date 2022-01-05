@@ -64,4 +64,4 @@ set noswapfile
 set nobackup                        " Avoids the creation of a backup file
 
 " Disable markdown from Polyglot
-let g:polyglot_disabled = ['markdown']
+" let g:polyglot_disabled = ['markdown']

@@ -28,7 +28,14 @@ vmap > >gv
 " Remove last highlight
 nnoremap <Leader>nh :noh<CR>
 
-" Easymotion 
-" let g:EasyMotion_do_mapping = 0
+" Easymotion
 map f <Plug>(easymotion-f)
-" nmap f <Plug>(easymotion-overwin-f)
+map F <Plug>(easymotion-F)
+map t <Plug>(easymotion-t)
+map T <Plug>(easymotion-T)
+
+" Telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>

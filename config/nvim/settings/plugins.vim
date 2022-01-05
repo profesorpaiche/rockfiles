@@ -29,15 +29,16 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 " Syntax
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 " Other pluggins
-" https://github.com/nvim-telescope/telescope.nvim
 " https://github.com/itchyny/calendar.vim
 " https://github.com/itchyny/vim-cursorword
+" https://github.com/nvim-treesitter/nvim-treesitter
 
 call plug#end()
 

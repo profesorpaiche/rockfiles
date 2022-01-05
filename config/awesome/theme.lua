@@ -1,53 +1,40 @@
------------------------------------
---  "Tokyo Night" awesome theme  --
---  By Dante C. (profesorpaiche) --
------------------------------------
-
-local color_bgr = "#1a1b26"
-local color_fgr = "#a9b1d6"
-local color_bla = "#444b6a"
-local color_red = "#ff7a93"
-local color_gre = "#b9f27c"
-local color_yel = "#ff9e64"
-local color_blu = "#7da6ff"
-local color_mag = "#bb9af7"
-local color_cya = "#0db9d7"
-local color_whi = "#acb0d0"
-
------------------------------------
+-------------------------------
+--  "Zenburn" awesome theme  --
+--    By Adrian C. (anrxc)   --
+-------------------------------
 
 local themes_path = require("gears.filesystem").get_themes_dir()
 local dpi = require("beautiful.xresources").apply_dpi
 
 -- {{{ Main
 local theme = {}
-theme.wallpaper = "/media/paiche/Imagenes/Wallpaper/Bakpau_dark_elegant.jpg"
+theme.wallpaper = themes_path .. "zenburn/zenburn-background.png"
 -- }}}
 
 -- {{{ Styles
-theme.font = "FantasqueSansMono Nerd Font 11"
+theme.font      = "UbuntuMono Nerd Font 10"
 
 -- {{{ Colors
-theme.fg_normal  = color_fgr
-theme.fg_focus   = color_fgr
-theme.fg_urgent  = color_bgr
-theme.bg_normal  = color_bgr
-theme.bg_focus   = color_bla
-theme.bg_urgent  = color_red
+theme.fg_normal  = "#DCDCCC"
+theme.fg_focus   = "#F0DFAF"
+theme.fg_urgent  = "#CC9393"
+theme.bg_normal  = "#3F3F3F"
+theme.bg_focus   = "#1E2320"
+theme.bg_urgent  = "#3F3F3F"
 theme.bg_systray = theme.bg_normal
 -- }}}
 
 -- {{{ Borders
 theme.useless_gap   = dpi(2)
 theme.border_width  = dpi(2)
-theme.border_normal = color_bla
-theme.border_focus  = color_red
-theme.border_marked = color_yel
+theme.border_normal = "#3F3F3F"
+theme.border_focus  = "#6F6F6F"
+theme.border_marked = "#CC9393"
 -- }}}
 
 -- {{{ Titlebars
-theme.titlebar_bg_focus  = color_bgr
-theme.titlebar_bg_normal = color_bla
+theme.titlebar_bg_focus  = "#3F3F3F"
+theme.titlebar_bg_normal = "#3F3F3F"
 -- }}}
 
 -- There are other variable sets
@@ -72,7 +59,7 @@ theme.titlebar_bg_normal = color_bla
 -- }}}
 
 -- {{{ Mouse finder
-theme.mouse_finder_color = color_red
+theme.mouse_finder_color = "#CC9393"
 -- mouse_finder_[timeout|animate_timeout|radius|factor]
 -- }}}
 
@@ -145,3 +132,5 @@ theme.titlebar_maximized_button_normal_inactive = themes_path .. "zenburn/titleb
 -- }}}
 
 return theme
+
+-- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:textwidth=80
