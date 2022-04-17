@@ -21,7 +21,7 @@ local dpi = require("beautiful.xresources").apply_dpi
 
 -- {{{ Main
 local theme = {}
-theme.wallpaper = "/media/paiche/Imagenes/Wallpaper/Bakpau_dark_elegant.jpg"
+theme.wallpaper = "/home/paiche/Imágenes/Wallpaper/001-4k.jpg"
 -- }}}
 
 -- {{{ Styles
@@ -34,12 +34,14 @@ theme.fg_urgent  = color_bgr
 theme.bg_normal  = color_bgr
 theme.bg_focus   = color_bla
 theme.bg_urgent  = color_red
+theme.tasklist_bg_normal = color_bla
+theme.tasklist_bg_focus = color_bgr
 theme.bg_systray = theme.bg_normal
 -- }}}
 
 -- {{{ Borders
 theme.useless_gap   = dpi(2)
-theme.border_width  = dpi(2)
+theme.border_width  = dpi(0)
 theme.border_normal = color_bla
 theme.border_focus  = color_red
 theme.border_marked = color_yel

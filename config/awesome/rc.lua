@@ -73,7 +73,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/home/paiche/.config/awesome/theme_meh.lua")
+beautiful.init("/home/paiche/.config/awesome/theme_tokyonight.lua")
 -- beautiful.init("/home/paiche/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
@@ -90,10 +90,10 @@ modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
+    awful.layout.suit.max,
+    awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.tile.bottom,
-    awful.layout.suit.floating,
-    awful.layout.suit.max,
     awful.layout.suit.magnifier,
     -- awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.top,
@@ -231,11 +231,14 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    local ws_names = {"  ","   ","   ","   ","   ","   ","   ","   ","  "}
+    local ws_names_min = {"   ","   ","   ","   ", "   ", "   "}
+    local ws_names_wth = {"   ","   ","   ","   ", "   ", "   "}
+    local ws_names_spc = {"   ","   ","   ","   ", "   ", "   "}
+    local ws_names_wnd = {"   ","   ","   ","   ", "   ", "   "}
+    local ws_names_dce = {"   ","   ","   ","   ", "   ", "   "}
     local ly = awful.layout.suit
-    local layouts = {ly.tile, ly.tile, ly.tile, ly.tile, ly.tile, ly.tile, ly.tile, ly.tile, ly.tile}
-    awful.tag(ws_names, s, layouts)
-    -- awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+    local layouts_6 = {ly.max, ly.max, ly.floating, ly.max, ly.max, ly.floating}
+    awful.tag(ws_names_wth, s, layouts_6)
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -297,9 +300,9 @@ awful.screen.connect_for_each_screen(function(s)
                 warning_msg_text = "",
                 warning_msg_icon = "~/Imágenes/memes/sad_cat_good_job_charger.jpg",
             },
-            mykeyboardlayout,
-            wibox.widget.systray(),
+            -- mykeyboardlayout,
             mytextclock,
+            wibox.widget.systray(),
             s.mylayoutbox,
         },
     }
@@ -310,9 +313,9 @@ end)
 
 -- {{{ Mouse bindings
 root.buttons(gears.table.join(
-    awful.button({ }, 3, function () mymainmenu:toggle() end),
-    awful.button({ }, 4, awful.tag.viewnext),
-    awful.button({ }, 5, awful.tag.viewprev)
+    awful.button({ }, 3, function () mymainmenu:toggle() end)
+    -- awful.button({ }, 4, awful.tag.viewnext),
+    -- awful.button({ }, 5, awful.tag.viewprev)
 ))
 -- }}}
 
@@ -321,10 +324,10 @@ root.buttons(gears.table.join(
 -- {{{ Key bindings
 globalkeys = gears.table.join(
     -- Help and menus
-    awful.key({ modkey }, "s", hotkeys_popup.show_help, {description="show help", group="awesome"}),
-    awful.key({ modkey }, "w", function () mymainmenu:show() end, {description = "show main menu", group = "awesome"}),
-    awful.key({ modkey }, "r", function () awful.screen.focused().mypromptbox:run() end, {description = "run prompt", group = "launcher"}),
-    awful.key({ modkey }, "p", function() menubar.show() end, {description = "show the menubar", group = "launcher"}),
+    awful.key({ modkey          }, "s", hotkeys_popup.show_help, {description="show help", group="awesome"}),
+    awful.key({ modkey          }, "w", function () mymainmenu:show() end, {description = "show main menu", group = "awesome"}),
+    awful.key({ modkey          }, "r", function () awful.screen.focused().mypromptbox:run() end, {description = "run prompt", group = "launcher"}),
+    awful.key({ modkey, "Shift" }, "p", function() menubar.show() end, {description = "show the menubar", group = "launcher"}),
     awful.key({ modkey }, "c",
         function ()
             awful.prompt.run {
@@ -336,8 +339,8 @@ globalkeys = gears.table.join(
         end,
         {description = "lua execute prompt", group = "awesome"}),
     -- System manipulation
-    awful.key({ modkey           }, "b", function () brightness_widget:inc() end, {description = "increase brightness", group = "custom"}),
-    awful.key({ modkey, "Shift"  }, "b", function () brightness_widget:dec() end, {description = "decrease brightness", group = "custom"}),
+    awful.key({ modkey, "Shift"  }, "b", function () brightness_widget:inc() end, {description = "increase brightness", group = "custom"}),
+    awful.key({ modkey, "Control"}, "b", function () brightness_widget:dec() end, {description = "decrease brightness", group = "custom"}),
     awful.key({ modkey, "Shift"  }, "v", function() volume_widget:inc(5) end),
     awful.key({ modkey, "Control"}, "v", function() volume_widget:dec(5) end),
     awful.key({ modkey           }, "v", function() volume_widget:toggle() end),
@@ -383,12 +386,13 @@ globalkeys = gears.table.join(
         end,
         {description = "restore minimized", group = "client"}),
     -- Programs
-    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end, {description = "open a terminal", group = "launcher"})
+    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end, {description = "open a terminal", group = "launcher"}),
+    awful.key({ modkey,           }, "p", function () awful.spawn("rofi -show run") end, {description = "launches Rofi", group = "launcher"})
 )
 
 clientkeys = gears.table.join(
     awful.key({ modkey,           }, "x", function (c) c:kill() end, {description = "close", group = "client"}),
-    awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle, {description = "toggle floating", group = "client"}),
+    awful.key({ modkey, "Shift"   }, "f",  awful.client.floating.toggle, {description = "toggle floating", group = "client"}),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end, {description = "move to master", group = "client"}),
     awful.key({ modkey,           }, "o", function (c) c:move_to_screen() end, {description = "move to screen", group = "client"}),
     awful.key({ modkey,           }, "t", function (c) c.ontop = not c.ontop end, {description = "toggle keep on top", group = "client"}),
@@ -610,13 +614,20 @@ client.connect_signal("request::titlebars", function(c)
     }
 end)
 
--- Enable sloppy focus, so that focus follows mouse.
-client.connect_signal("mouse::enter", function(c)
-    c:emit_signal("request::activate", "mouse_enter", {raise = false})
-end)
+-- -- Enable sloppy focus, so that focus follows mouse.
+-- client.connect_signal("mouse::enter", function(c)
+--     c:emit_signal("request::activate", "mouse_enter", {raise = false})
+-- end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+
+-- Rounded corners
+client.connect_signal("manage", function (c)
+    c.shape = function(cr,w,h)
+        gears.shape.rounded_rect(cr,w,h,5)
+    end
+end)
 -- }}}
 
 --------------------------------------------------------------------------------
