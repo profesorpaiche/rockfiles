@@ -18,17 +18,17 @@
 # Date: 2022-04-01
 # --------------------------------------------------------------------------- #
 
-grep $2 list.csv | while read line; do
-    original=$(echo $line | awk -F, '{print $2}')
-    repository=$(echo $line | awk -F, '{print $3}')
+grep $2 list.txt | while read line; do
+    original=$(echo $line | awk '{print $2}')
+    repository=$(echo $line | awk '{print $3}')
 
     case $1 in
         update)
-            echo "Copying" $original "to" $repository
-            cp $original $repository
+            echo "Copying" $HOME"/"$original "to" "rockfiles/"$repository
+            cp $HOME"/"$original $repository
             ;;
         instal)
-            echo "Copying" $repository "to" $original
+            echo "Copying" $repository "to" "rockfiles/"$original
             cp $repository $original
             ;;
         *) # Default
