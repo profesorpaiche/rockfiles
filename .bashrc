@@ -76,7 +76,7 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     # test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    alias lx='exa -al --color=always --sort=ext --group-directories-first --icons'
+    alias lx='exa -al --color=always --group-directories-first --icons'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -124,8 +124,8 @@ fi
 
 ##### PATH #####
 
-PATH="$HOME/.cargo/bin${PATH:+:${PATH}}"
-export PATH="$PATH:/home/paiche/.local/bin:/opt/deadbeef/bin:/home/paiche/Librerias/julia-1.6.1/bin:/opt/opengrads"
+# PATH="$HOME/.cargo/bin${PATH:+:${PATH}}"
+export PATH="$PATH:$HOME/.cargo/bin:/home/paiche/.local/bin:/opt/deadbeef/bin:/home/paiche/Librerias/julia-1.7.1/bin:/opt/opengrads:$HOME/Librerias/focalboard-app"
 
 ##### PKG_CONFIG_PATH #####
 
@@ -168,21 +168,22 @@ export VISUAL=nvim
 
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/home/paiche/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+# # >>> conda initialize >>>
+# # !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/home/paiche/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 # if [ $? -eq 0 ]; then
 #     eval "$__conda_setup"
 # else
-#     if [ -f "/home/paiche/anaconda3/etc/profile.d/conda.sh" ]; then
-#         . "/home/paiche/anaconda3/etc/profile.d/conda.sh"
+#     if [ -f "/home/paiche/miniconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/paiche/miniconda3/etc/profile.d/conda.sh"
 #     else
-#         export PATH="/home/paiche/anaconda3/bin:$PATH"
+#         export PATH="/home/paiche/miniconda3/bin:$PATH"
 #     fi
 # fi
 # unset __conda_setup
-# <<< conda initialize <<<
-alias anaconda='source .condabashrc'
+# # <<< conda initialize <<<
+# alias anaconda='source .condabashrc'
+alias condaup="source $HOME/.activatecondarc"
 
 ##### STARSHIP #####
 
