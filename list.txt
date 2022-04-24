@@ -1,0 +1,6 @@
+category orginal repository
+awesome .config/awesome/rc.lua .config/awesome/rc.lua
+awesome .config/awesome/theme_tokyonight.lua .config/awesome/theme_tokyonight.lua
+bash .bashrc .bashrc
+starship .config/starship.toml .config/starship.toml
+tmux .tmux.conf .tmux.conf
