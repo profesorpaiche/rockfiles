@@ -19,17 +19,16 @@
 # --------------------------------------------------------------------------- #
 
 grep $2 list.txt | while read line; do
-    original=$(echo $line | awk '{print $2}')
-    repository=$(echo $line | awk '{print $3}')
+    conffile=$(echo $line | awk '{print $2}')
 
     case $1 in
         update)
-            echo "Copying" $HOME"/"$original "to" "rockfiles/"$repository
-            cp $HOME"/"$original $repository
+            echo "Copying" $HOME"/"$conffile "to" "rockfiles/"$conffile
+            cp $HOME"/"$conffile $conffile
             ;;
         instal)
-            echo "Copying" $repository "to" "rockfiles/"$original
-            cp $repository $original
+            echo "Copying" $conffile "to" "rockfiles/"$conffile
+            cp $conffile $HOME"/"$conffile
             ;;
         *) # Default
             echo "No option selected"
