@@ -3,5 +3,13 @@ awesome .config/awesome/rc.lua
 awesome .config/awesome/theme_tokyonight.lua
 bash .bashrc
 picom .config/picom/picom.conf
+polybar .config/polybar/config
+polybar .config/polybar/launch.sh
+polybar .config/polybar/uptime.sh
+rofi .config/rofi/config
+rofi .config/rofi/nord.rasi
 starship .config/starship.toml
 tmux .tmux.conf
+tmux .config/tmux/iceberg.tmux.conf
+vim .vim/plantillas/pl_mitra.r
+vim .vim/plantillas/pl_mitra.Rmd
