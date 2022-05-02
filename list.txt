@@ -13,3 +13,10 @@ tmux .tmux.conf
 tmux .config/tmux/iceberg.tmux.conf
 vim .vim/plantillas/pl_mitra.r
 vim .vim/plantillas/pl_mitra.Rmd
+vim .config/nvim/init.vim
+vim .config/nvim/settings/functions.vim
+vim .config/nvim/settings/keybindings.vim
+vim .config/nvim/settings/plugins.vim
+vim .config/nvim/settings/general.vim
+vim .config/nvim/ftdetect/netlogo.vim
+vim .config/nvim/syntax/netlogo.vim
