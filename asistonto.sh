@@ -26,7 +26,7 @@ grep $2 list.txt | while read line; do
             echo "Copying" $HOME"/"$conffile "to" "rockfiles/"$conffile
             cp $HOME"/"$conffile $conffile
             ;;
-        instal)
+        install)
             echo "Copying" $conffile "to" "rockfiles/"$conffile
             cp $conffile $HOME"/"$conffile
             ;;
