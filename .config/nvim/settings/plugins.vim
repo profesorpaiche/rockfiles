@@ -27,6 +27,7 @@ Plug 'lifepillar/vim-mucomplete'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'nvim-telescope/telescope-file-browser.nvim'
 
 " Syntax
 " Plug 'sheerun/vim-polyglot'
@@ -47,23 +48,33 @@ call plug#end()
 " ---------------------
 
 " Colorscheme
-" let g:tokyonight_style = 'night'
-" let g:tokyonight_transparent_background = 1
-" let g:tokyonight_enable_italic = 1
-" colorscheme tokyonight
-" let g:meh_pandoc_enabled = 1
-colorscheme meh
+set termguicolors
+set cursorline
+
+let g:tokyonight_style = 'night'
+let g:tokyonight_transparent_background = 1
+let g:tokyonight_enable_italic = 1
+colorscheme tokyonight
+
+" colorscheme meh
+" hi Normal guibg=NONE ctermbg=NONE
 
 " Indentline
 let g:indentLine_setColors = 1
 let g:indentLine_char = '│'
+" Disable identlines in markdown documents
+let g:indentLine_fileTypeExclude = ['markdown', 'pandoc', 'rmarkdown']
 
 " Markdown
 let g:pandoc#spell#enabled = 0
+" Disable identlines in markdown documents
+" augroup FILETYPES
+"     autocmd FileType markdown let b:indentLine_enabled = 0
+" augroup END
 
 " Lightline
 let g:lightline = {
-    \ 'colorscheme': 'Tomorrow_Night',
+    \ 'colorscheme': 'tokyonight', 
     \ 'active': {
     \   'right': [['lineinfo'], ['fileformat', 'filetype']]
     \ },
@@ -92,6 +103,7 @@ let g:startify_bookmarks = [
     \ { 'wm': '~/.config/awesome/rc.lua' },
     \ { 'v': '~/.config/nvim/init.vim' },
     \ { 'al': '~/.config/alacritty/alacritty.yml' },
+    \ { 'bm': '~/Música/buscar.txt' },
     \ ]
 
 let g:startify_fortune_use_unicode = 1
@@ -103,3 +115,4 @@ let g:startify_custom_header = [
     \ ' / / / / |/ / / / / / / /',
     \ '/_/ /_/|___/_/_/ /_/ /_/ ',
     \]
+

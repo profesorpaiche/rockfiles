@@ -1,5 +1,9 @@
 " Setting keybindings
 
+" Unmap F1
+map <F1> <Esc>
+imap <F1> <Esc>
+
 " Leader key
 let mapleader = " "
 
@@ -39,3 +43,9 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" Startify
+nnoremap <leader>S :tabnew<CR>:Startify<CR>
+
+" Explorer
+nnoremap <Leader>nt :Vexplore<CR>

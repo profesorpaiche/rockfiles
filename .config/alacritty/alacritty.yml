@@ -40,6 +40,9 @@ window:
   # GTK theme variant (Linux/BSD only)
   #gtk_theme_variant: None
 
+  # Opacity
+  opacity: 0.75
+
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
@@ -72,7 +75,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 7.5
+  size: 8.0
   # size: 11
 
   # Offset is the extra space around each character. `offset.y` can be thought of
@@ -319,17 +322,12 @@ schemes:
   meh: &meh
     # Default colors
     primary:
-      background: '#202022'
-      foreground: '#ddddcc'
-
-    # Cursor color
-    cursor:
-      text:   '#202022'
-      cursor: '#ddddcc'
+      background: '#1c1c1c'
+      foreground: '#efefef'
 
     # Normal colors
     normal:
-      black:   '#1c1c1c'
+      black:   '#303033'
       red:     '#ee6666'
       green:   '#77aa88'
       yellow:  '#ddaa66'
@@ -340,7 +338,7 @@ schemes:
 
     # Bright colors
     bright:
-      black:   '#303033'
+      black:   '#505a6a'
       red:     '#dd7766'
       green:   '#99bb99'
       yellow:  '#ccaa88'
@@ -623,11 +621,11 @@ schemes:
       cyan:    '#99b7c2'
       white:   '#ffffff'
 
-colors: *meh
+colors: *tokyo-night
 
 # Background opacity
-# background_opacity: 0.95
-window.opacity: 0.60
+# background_opacity: 0.9
+# window.opacity: 0.60
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"

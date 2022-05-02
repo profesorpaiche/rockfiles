@@ -28,8 +28,8 @@ set shiftwidth=4
 set expandtab
 
 " Make it pretty
-set termguicolors
-set cursorline
+" set termguicolors
+" set cursorline
 " highlight Normal guibg=NONE ctermbg=NONE
 "highlight Comment cterm=italic gui=italic
 "highlight Statement gui=bold cterm=bold
@@ -46,7 +46,6 @@ let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_browse_split = 3
 let g:netrw_winsize = 25
-nnoremap <Leader>nt :Vexplore<CR>
 
 " Fortran settings
 let fortran_free_source=1
