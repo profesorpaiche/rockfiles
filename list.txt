@@ -12,8 +12,8 @@ qtile .config/qtile/colors.py
 qtile .config/qtile/config.py
 rofi .config/rofi/config
 rofi .config/rofi/nord.rasi
-spectrwm .conf/spectrwm/baraction.sh
-spectrwm .conf/spectrwm/spectrwm.conf
+spectrwm .config/spectrwm/baraction.sh
+spectrwm .config/spectrwm/spectrwm.conf
 starship .config/starship.toml
 tmux .tmux.conf
 tmux .config/tmux/iceberg.tmux.conf
