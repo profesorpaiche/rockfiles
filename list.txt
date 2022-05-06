@@ -1,6 +1,7 @@
 alacritty .config/alacritty/alacritty.yml
 awesome .config/awesome/rc.lua
 awesome .config/awesome/theme_tokyonight.lua
+awesome .config/awesome/sad_cat_good_job.jpg
 bash .bashrc
 picom .config/picom/picom.conf
 polybar .config/polybar/config

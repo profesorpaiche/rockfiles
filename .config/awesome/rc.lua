@@ -298,7 +298,7 @@ awful.screen.connect_for_each_screen(function(s)
                 timeout = 60,
                 warning_msg_title = "",
                 warning_msg_text = "",
-                warning_msg_icon = "~/Imágenes/memes/sad_cat_good_job_charger.jpg",
+                warning_msg_icon = "~/.config/awesome/sad_cat_good_job_charger.jpg",
             },
             -- mykeyboardlayout,
             mytextclock,
