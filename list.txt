@@ -7,8 +7,13 @@ picom .config/picom/picom.conf
 polybar .config/polybar/config
 polybar .config/polybar/launch.sh
 polybar .config/polybar/uptime.sh
+qtile .config/qtile/autostart.sh
+qtile .config/qtile/colors.py
+qtile .config/qtile/config.py
 rofi .config/rofi/config
 rofi .config/rofi/nord.rasi
+spectrwm .conf/spectrwm/baraction.sh
+spectrwm .conf/spectrwm/spectrwm.conf
 starship .config/starship.toml
 tmux .tmux.conf
 tmux .config/tmux/iceberg.tmux.conf
