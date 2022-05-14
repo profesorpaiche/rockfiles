@@ -3,6 +3,8 @@ awesome .config/awesome/rc.lua
 awesome .config/awesome/theme_tokyonight.lua
 awesome .config/awesome/sad_cat_good_job.jpg
 bash .bashrc
+kitty .config/kitty/kitty.conf
+kitty .config/kitty/Nord.conf
 picom .config/picom/picom.conf
 polybar .config/polybar/config
 polybar .config/polybar/launch.sh
@@ -26,3 +28,10 @@ vim .config/nvim/settings/plugins.vim
 vim .config/nvim/settings/general.vim
 vim .config/nvim/ftdetect/netlogo.vim
 vim .config/nvim/syntax/netlogo.vim
+zsh .zprofile
+zsh .config/zsh/.zshrc
+zsh .config/zsh/zsh-aliases
+zsh .config/zsh/zsh-exports
+zsh .config/zsh/zsh-functions
+zsh .config/zsh/zsh-prompt
+zsh .config/zsh/zsh-vim-mode
