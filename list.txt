@@ -5,6 +5,8 @@ awesome .config/awesome/sad_cat_good_job.jpg
 bash .bashrc
 kitty .config/kitty/kitty.conf
 kitty .config/kitty/Nord.conf
+kitty .config/kitty/tokyonight_night.conf
+kitty .config/kitty/tokyonight_storm.conf
 picom .config/picom/picom.conf
 polybar .config/polybar/config
 polybar .config/polybar/launch.sh
