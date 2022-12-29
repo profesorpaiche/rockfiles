@@ -1,11 +1,1 @@
-require "paiche.options"
-require "paiche.keymaps"
-require "paiche.plugins"
-require "paiche.colorscheme"
-require "paiche.cmp"
-require "paiche.lsp"
-require "paiche.telescope"
-require "paiche.treesitter"
-require "paiche.autopairs"
-require "paiche.gitsigns"
-require "paiche.lualine"
+require("paiche")
