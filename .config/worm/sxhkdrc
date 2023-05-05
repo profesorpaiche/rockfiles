@@ -1,0 +1,79 @@
+# Restart worm
+super + ctrl + r
+    worm
+
+# Quit worm
+ctrl + alt + q
+    pkill worm
+
+# Close app
+super + x
+    wormc close-active-client
+
+# Kill app
+super + shift + x
+    wormc kill-active-client
+
+# Maximize app
+super + f
+    wormc maximize-active-client
+
+# Minimize app
+super + n
+    wormc minimize-active-client
+
+# Tags
+super + {_, shift + } {1-9}
+    wormc {switch,move-active}-tag {1-9}
+
+# Set master windows
+super + m
+    wormc master-active
+
+# Float a window
+super + shift + f
+    wormc float-active
+
+# Change layout
+super + t
+    wormc layout tiling
+
+super + shift + t
+    wormc layout floating
+
+# Open terminal
+super + Return
+    alacritty
+
+ctrl + alt + t
+    alacritty
+
+# Launcher
+super + p
+    dmenu_run
+
+# Control volume
+super + v
+    amixer -D pulse set Master 3%+
+
+super + shift + v
+    amixer -D pulse set Master 3%-
+
+super + ctrl + v
+    amixer -D pulse set Master toggle
+    
+XF86AudioRaiseVolume
+    amixer -D pulse set Master 3%+
+
+XF86AudioLowerVolume
+    amixer -D pulse set Master 3%-
+
+XF86AudioMute
+    amixer -D pulse set Master toggle
+    
+# Control brightness
+super + b
+    light -A 5
+
+super + shift + b
+    light -U 5

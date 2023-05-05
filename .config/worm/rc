@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+# | NOTE | NOTE | NOTE | NOTE |
+# if you use this configuration, make sure that the paths are all right for the configuration file. this is just an example!!!
+# you would also need things like nitrogen and polybar installed.
+
+# exec polybar top -q -c ~/.config/worm/polybar/config.ini &
+
+# exec mpd &
+
+exec nm-applet &
+exec picom --experimental-backends &
+exec nitrogen --restore &
+exec sxhkd -c ~/.config/worm/sxhkdrc &
+exec ~/.config/polybar/launch.sh &
+exec setxkbmap -layout latam &
+
+## pywal support
+# # CONFIGURE
+# pywal_active_index="3" # color3
+# pywal_inactive_index="4" # color4
+#
+# # CODE
+# contrast_text_for () {
+#   # Formula from:
+#   # https://stackoverflow.com/questions/596216/formula-to-determine-perceived-brightness-of-rgb-color
+#   # https://www.w3.org/TR/AERT/#color-contrast
+#   if perl -e "exit ((1 - (0.299 * $((16#${1:0:2})) + 0.587 * $((16#${1:2:2})) + 0.114 * $((16#${1:4:2}))) / 255) > 0.5)"; then
+#     echo $((16#FF000000))
+#   else
+#     echo $((16#FFFFFFFF))
+#   fi
+# }
+# pywal_active="$(sed -n $(($pywal_active_index + 1))p ~/.cache/wal/colors | tail -c +2)"
+# pywal_inactive="$(sed -n $(($pywal_inactive_index + 1))p ~/.cache/wal/colors | tail -c +2)"
+# wormc border-active-pixel $((16#FF$pywal_active))
+# wormc border-inactive-pixel $((16#FF$pywal_inactive))
+# wormc frame-active-pixel $((16#FF$pywal_active))
+# wormc frame-inactive-pixel $((16#FF$pywal_inactive))
+# wormc text-active-pixel $(contrast_text_for $pywal_active)
+# wormc text-inactive-pixel $(contrast_text_for $pywal_inactive)
+
+# Border
+wormc border-active-pixel $((16#ff00ffff))
+wormc border-inactive-pixel $((16#ff000000))
+wormc border-width 0
+
+# Frame
+wormc frame-active-pixel $((16#00117744))
+wormc frame-inactive-pixel $((16#aa000000))
+wormc frame-height 5
+# wormc frame-left 'C;M;T'
+# wormc frame-left 'I'
+# wormc frame-center 'T'
+# wormc frame-right 'M;C'
+# wormc button-size 10
+# wormc button-offset 0 5
+wormc text-font 'FantasqueSanMono Nerd Font':pixelsize=10
+wormc text-offset 0 5
+wormc text-active-pixel $((16#ffffffff))
+wormc text-inactive-pixel $((16#ff000000))
+
+# Removin decorations under some rules
+# wormc decoration-disable '(?i).*firefox.*'
+
+# Around windows
+wormc gaps 5
+wormc struts 30 5 5 5
+
+# Default layout
+wormc layout floating
+
+# Focus windows with mouse
+wormc focus-mode 2
+
+# Modifier key to resize windows
+# wormc modifier ???

@@ -1,0 +1,7 @@
+[[language]]
+name = "r"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "rmarkdown"
+indent = { tab-width = 4, unit = "    " }

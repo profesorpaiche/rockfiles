@@ -1,0 +1,36 @@
+theme = "rose_pine"
+
+[editor]
+line-number = "relative"
+cursorline = false
+auto-format = false
+idle-timeout = 200
+color-modes = true
+mouse = false
+bufferline = "always"
+auto-info = true
+
+[editor.lsp]
+auto-signature-help = true
+display-signature-help-docs = false
+
+[editor.statusline]
+left = ["mode", "selections", "spinner", "diagnostics"]
+center = ["file-name"]
+right = ["file-type", "file-encoding", "position", "position-percentage"]
+separator = "│"
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+
+[keys.normal]
+C-q = ":reflow 80"
+esc = ["collapse_selection", "keep_primary_selection"]

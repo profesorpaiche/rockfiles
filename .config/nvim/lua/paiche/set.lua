@@ -59,6 +59,9 @@ vim.opt.showmode = false
 -- Better yanking
 vim.opt.clipboard = "unnamedplus"
 
+-- Diable folding
+vim.opt.foldenable = false
+
 -- Adding EOL character
 -- vim.opt.list = true
 -- vim.opt.listchars:append "eol:↴"
