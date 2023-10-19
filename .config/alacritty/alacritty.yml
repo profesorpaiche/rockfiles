@@ -35,7 +35,7 @@ window:
   #decorations: full
 
   # Background opacity
-  opacity: 0.8
+  opacity: 0.9
 
   # Startup Mode (changes require restart)
   #startup_mode: Windowed
@@ -104,12 +104,12 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (pine rose)
+# Colors (chalk)
 colors:
   # Default colors
   primary:
-    background: '#191724'
-    foreground: '#e0def4'
+    background: '#202732'
+    foreground: '#eaedeb'
 
     # Bright and dim foreground colors
     #dim_foreground: '#828482'
@@ -125,30 +125,30 @@ colors:
 
   # Normal colors
   normal:
-    black:   '#1f1d2e'
-    red:     '#eb6f92'
-    green:   '#ebbcba'
-    yellow:  '#f6c177'
-    blue:    '#31748f'
-    magenta: '#c4a7e7'
-    cyan:    '#9ccfd8'
-    white:   '#6e6a86'
+    black:   '#423e49'
+    red:     '#ffa2cc'
+    green:   '#9cd0ad'
+    yellow:  '#fef6ab'
+    blue:    '#a9dafa'
+    magenta: '#d1bbf6'
+    cyan:    '#ffd19b'
+    white:   '#cad0cf'
 
   # Bright colors
   bright:
     black:   '#26233a'
-    red:     '#eb6f92'
-    green:   '#ebbcba'
-    yellow:  '#f6c177'
-    blue:    '#31748f'
-    magenta: '#c4a7e7'
-    cyan:    '#9ccfd8'
-    white:   '#908caa'
+    red:     '#ffc1dd'
+    green:   '#b6d9c0'
+    yellow:  '#fffacc'
+    blue:    '#c8e6fa'
+    magenta: '#e3d8f6'
+    cyan:    '#ffdfba'
+    white:   '#dde2e1'
 
   # Indexed Colors
-  indexed_colors:
-    - { index: 16, color: '#403d52' }
-    - { index: 17, color: '#524f67' }
+  # indexed_colors:
+  #   - { index: 16, color: '#403d52' }
+  #   - { index: 17, color: '#524f67' }
 
 #selection:
   # This string contains all characters that are used as separators for
