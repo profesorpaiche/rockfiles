@@ -1,0 +1,64 @@
+live_config_reload = true
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "#777482"
+red = "#FFCCDF"
+green = "#C5E9CF"
+yellow = "#F5F2C9"
+blue = "#CAE6FB"
+magenta = "#E5DAF8"
+cyan = "#FDDDBF"
+white = "#D0CCDE"
+
+[colors.normal]
+black = "#5B5965"
+red = "#FEA2C7"
+green = "#A1DAB1"
+yellow = "#FDF7AB"
+blue = "#A6D8F9"
+magenta = "#D3C2EF"
+cyan = "#FFC98B"
+white = "#B1AEBE"
+
+[colors.primary]
+background = "#1F3D36"
+foreground = "#EFEBFF"
+
+[cursor]
+unfocused_hollow = true
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 8.0
+
+[font.bold]
+family = "MonoLisa"
+style = "Bold"
+
+[font.bold_italic]
+family = "MonoLisa"
+style = "Bold Italic"
+
+[font.italic]
+family = "MonoLisa"
+style = "Italic"
+
+[font.normal]
+family = "MonoLisa"
+style = "Regular"
+
+[scrolling]
+history = 10000
+
+[window]
+opacity = 1.0
+title = "Alacritty"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
